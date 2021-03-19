@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medilab Free Bootstrap HTML5 Template</title>
+    <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Font-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/css-login-register/roboto-font.css">
+    <link rel="stylesheet" type="text/css" href="fonts-login-register/font-awesome-5/css/fontawesome-all.min.css">
+    <!-- Main Style Css -->
+    <link rel="stylesheet" href="stylesheets/css-login-register/style.css"/>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--banner-->
+<section id="banner" class="banner">
+    <div class="bg-color">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/img/logo.png" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="home">Home</a></li>
+                            <li class=""><a href="register">Logout</a></li>
+                            <li class=""><a href="diabetul">Diabetul</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="banner-info">
+                    <div class="banner-logo text-center">
+                        <img src="images/img/logo.png" class="img-responsive">
+                    </div>
+                    <div class="banner-text text-center">
+                        <h1 class="white">Healthcare at your desk!!</h1>
+                        <p>Ai grija de tine!</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="section-title">
+                    <h2 class="head-title lg-line">The Medilap <br>Ultimate Dream</h2>
+                    <hr class="botm-line">
+                    <p class="sec-para">Pentru a putea sa iti analizezi formular te rog completeaza formularul de mai jos.</p>
+    
+                </div>
+            </div>
+
+            <body class="form-v5">
+                <div class="page-content">
+                    <div class="form-v5-content">
+                        <form class="form-detail" action="/checkanalize" method="POST" autocomplete="off">
+                            <h2>Formular analize</h2>
+                            <div class="form-row">
+                                <label for="Analiza1">Glicemie</label>
+                                <input type="number" name="Analiza1" id="username" class="input-text" placeholder="Glicemie" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                           
+                            <div class="form-row">
+                                <label for="Analiza2">Hemoglobina Glicozilata (Glicata)</label>
+                                <input type="number" name="Analiza2" id="password" class="input-text" placeholder="Hemoglobina Glicozilata (Glicata)" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-row">
+                                <label for="Analiza2">Glicozurie</label>
+                                <input type="text" name="Analiza3" id="password" class="input-text" placeholder="Glicozurie" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-row-last">
+                                <input type="submit" name="register" class="register" id="analize-buton" value="Trimite analizele">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </body>
+
+
+<script>
+    document.getElementById("analize-buton").onclick = function(){
+        location.href = 'checkanalize';
+    }
+</script>

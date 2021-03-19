@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medilab Free Bootstrap HTML5 Template</title>
+    <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/styleTest/style.css">
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--banner-->
+<section id="banner" class="banner">
+    <div class="bg-color">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/img/logo.png" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="home">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="banner-info">
+                    <div class="banner-logo text-center">
+                        <img src="images/img/logo.png" class="img-responsive">
+                    </div>
+                    <div class="banner-text text-center">
+                        <h1 class="white">Healthcare at your desk!!</h1>
+                        <p>Ai grija de tine!</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ banner-->
+
+<div class="wrapper">
+    <div class="wrap" id="q1">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"><span id="number"> </span>1 of 3 </div>
+        </div>
+        <div class="h4 font-weight-bold"> 1. Cate tipuri de diabet exista?</div>
+        <div class="pt-4">
+            <form> <label class="options">1<input type="radio" name="radio"> <span class="checkmark"></span> </label> <label class="options">2 <input type="radio" name="radio"> <span class="checkmark"></span> </label> <label class="options">3 <input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> <label class="options">4<input type="radio" name="radio"> <span class="checkmark"></span> </label> </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary" id="next1">Next <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+    <div class="wrap" id="q2">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>2 of 3 </div>
+        </div>
+        <div class="h4 font-weight-bold"> 2. Ce este diabetul?</div>
+        <div class="pt-4">
+            <form> <label class="options">Diabetul zaharat este cea mai des întâlnită boală a sistemului endocrin<input type="radio" name="radio"> <span class="checkmark"></span> </label> <label class="options">Diabetul zaharat este cea mai des întâlnită boală a sistemului pulmonar<input type="radio" name="radio" checked> <span class="checkmark"></span> </label> <label class="options">O boala mintala<input type="radio" name="radio" id="rd"> <span class="checkmark"></span> </label> <label class="options">Nici una de mai sus<input type="radio" name="radio"> <span class="checkmark"></span> </label> </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back1"> <span class="fas fa-arrow-left pr-1"></span>Previous </button> <button class="btn btn-primary" id="next2">Next <span class="fas fa-arrow-right"></span> </button> </div>
+    </div>
+    <div class="wrap" id="q3">
+        <div class="text-center pb-4">
+            <div class="h5 font-weight-bold"> <span id="number"> </span>3 of 3 </div>
+        </div>
+        <div class="h4 font-weight-bold"> 3. Ce poti manca cand suferi de diabet?</div>
+        <div class="pt-4">
+            <form> <label class="options">Ciocolata<input type="radio" name="radio"> <span class="checkmark"></span> </label> <label class="options">Dulceata<input type="radio" name="radio"> <span class="checkmark"></span> </label> <label class="options">Fructe proaspete<input type="radio" name="radio" id="rd" checked> <span class="checkmark"></span> </label> <label class="options">Leguminoase <input type="radio" name="radio"> <span class="checkmark"></span> </label> </form>
+        </div>
+        <div class="d-flex justify-content-end pt-2"> <button class="btn btn-primary mx-3" id="back2"> <span class="fas fa-arrow-left pr-2"></span>Previous </button> <button class="btn btn-primary" id="next3">Submit </button> </div>
+    </div>
+</div>
+<div class="d-flex flex-column align-items-center">
+    <div class="h3 font-weight-bold text-white">Go Dark</div> <label class="switch"> <input type="checkbox"> <span class="slider round"></span> </label>
+</div>
+<script>
+    var q1 = document.getElementById("q1");
+    var q2 = document.getElementById("q2");
+    var q3 = document.getElementById("q3");
+    var next1 = document.getElementById('next1')
+    var back1 = document.getElementById('back1')
+    var next2 = document.getElementById('next2')
+    var back2 = document.getElementById('back2')
+    document.addEventListener('DOMContentLoaded', function() {
+        let query = window.matchMedia("(max-width: 767px)");
+        if (query.matches) {
+            next1.onclick = function() {
+                q1.style.left = "-650px";
+                q2.style.left = "15px";
+            }
+            back1.onclick = function() {
+                q1.style.left = "15px";
+                q2.style.left = "650px";
+            }
+            back2.onclick = function() {
+                q2.style.left = "15px";
+                q3.style.left = "650px";
+            }
+            next2.onclick = function() {
+                q2.style.left = "-650px";
+                q3.style.left = "15px";
+            }
+        } else {
+            next1.onclick = function() {
+                q1.style.left = "-650px";
+                q2.style.left = "50px";
+            }
+            back1.onclick = function() {
+                q1.style.left = "50px";
+                q2.style.left = "650px";
+            }
+            back2.onclick = function() {
+                q2.style.left = "50px";
+                q3.style.left = "650px";
+            }
+            next2.onclick = function() {
+                q2.style.left = "-650px";
+                q3.style.left = "50px";
+            }
+        }
+    });
+
+    function uncheck() {
+        var rad = document.getElementById('rd')
+        rad.removeAttribute('checked')
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const main = document.querySelector('body')
+        const toggleSwitch = document.querySelector('.slider')
+        toggleSwitch.addEventListener('click', () => {
+            main.classList.toggle('dark-theme')
+        })
+    })
+</script>

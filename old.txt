@@ -1,0 +1,95 @@
+var express = require('express');
+var app = express();
+let path = require('path');
+let mongoose              =  require("mongoose");
+let passport              =  require("passport");
+let bodyParser            =  require("body-parser");
+let LocalStrategy         =  require("passport-local");
+let passportLocalMongoose =  require("passport-local-mongoose");
+let User                  =  require("./models/User");
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+const indexHome  = require('./routes/home');
+app.use('/home',indexHome);
+
+const indexRegister = require('./routes/register');
+app.use('/register',indexRegister);
+
+const indexLogin = require('./routes/login');
+app.use('/login',indexLogin);
+
+const indexDiabetul = require('./routes/diabetul');
+app.use('/diabetul',indexDiabetul);
+
+
+
+
+port = 7000;
+app.listen(port,()=>console.info('Port listen 7000'));
+
+module.exports = app;
+
+
+
+
+var express = require('express');
+var router = express.Router();
+var axios = require('axios');
+const querystring = require('querystring');
+let cookieParser = require('cookie-parser');
+
+router.use(cookieParser());
+
+router.get('/', (req,res) =>{
+
+    let context = req.cookies["context"];
+    res.clearCookie("context",{httpOnly:true});
+    res.render('login',context);
+
+});
+
+router.post('/', (req,res) =>{
+    axios.post('http://localhost:3000/login', {
+        email: req.body.email,
+        password: req.body.password
+      })
+      .then((response) => {
+          if (response.status == 200) {
+              res.cookie("context","accessToken:" + response.data.accessToken, "refreshToken:" + response.data.refreshToken,
+                  "isCompany:" + response.data.isCompany == null || response.data.isCompany == false ? false : true
+                  ,{httpOnly:true});
+              if(response.data.isCompany == null){
+                  res.redirect('menu-user');
+
+              }
+              else {
+                  res.redirect('company-menu');
+
+              }
+
+          }
+      });
+    });
+module.exports = router;
+
+<p>Salut analizele tale au valorile <%= data1 %> si <%= data2 %> asta inseamna ca esti bine!</p>
+
+
+
+
+
+Glicemie: merge pana la 120 valoare miligramare la suta
+
+Glicozurie nu trebuie sa fie prezenta ca sa nu ai diabetul
+
+
+Hemoglobina pana la 6,5 e normal
